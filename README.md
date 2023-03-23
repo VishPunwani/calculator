@@ -1,2 +1,2 @@
 # calculator
-Javascript practise project
+Javascript practice project
