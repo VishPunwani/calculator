@@ -21,6 +21,10 @@ class Calculator {
     }
 
     chooseOperation(operation){
+        if (this.currentOperand ==='') return
+        if (this.previousOperand !== ''){
+            this.compute
+        }
         this.operation = operation
         this.previousOperand = this.currentOperand
         this.currentOperand = ''
@@ -58,6 +62,13 @@ numberButtons.forEach(button =>{
 operationButtons.forEach(button => {
     button.addEventListener('click', () => {
       calculator.chooseOperation(button.innerText)
+      calculator.updateDisplay()
+    })
+  })
+
+  equalsButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      calculator.compute()
       calculator.updateDisplay()
     })
   })
